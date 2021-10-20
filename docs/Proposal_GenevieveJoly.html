@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Final Project Proposal</title>
+    <link rel="stylesheet" href="ProposalRules.css">
+</head>
+<body>
+    <h3>Cartography II<br /> GEOG 3610/5610<br /> Genevieve Joly</h3>
+    <h1>Crime, Inequality, and Population Density</h1>
+     <p>Throughout the US, the concept of crime is generally associated with high levels of inequality and population density. Hundreds of thousands of 911 calls are made every day in varying parts of the world and it seems a simple connection to imagine that many of them are placed in impoverished and densely packed areas. However, this widely held belief could have more to do with prejudice and stereotypes rather than facts. To determine this, I will explore the frequency, amount, and type of emergency calls within a city and compare them to median income levels and population amounts. The results of this will reveal if there is a correlation between the statistics and, if so, how prominent this correlation is. With this knowledge, cities can better plan the location of emergency services and ensure that frequently used routes are accessible. Additionally, future researchers could potentially use this evidence to inform their studies on the many different facets of poverty. Regardless of the resulting conclusion, it is important to note that this research is limited to a single city, and therefore is not an accurate representation of the entire world. The results of this project can provide an idea of possible connections, but further research in a vast number of varied cities would need to be completed for a tentative theory of correlation to be developed.</p>
+    <ol>
+        <li><i class="heading">The Purpose of the Map:</i> In my final map project, I will examine emergency calls in Baton Rouge, Louisiana in connection to income rates and population density. Within the category of emergency calls, I will look at the location they occur, the volume of calls in the area, the type of calls they are, and the time that the calls are placed. The intended audience for this project is anyone curious if there is correlation between the previously mentioned statistics. Ideally, by the end of this project, I will be able to display the correlation, or lack thereof, clearly, and I will have learned more coding skills in the process. The final map will be interactable in terms of the user being able to click on the polygons or symbols on the map and view the related data. The user will also be able to zoom and pan around the Baton Rouge area and switch between the statistics previously listed to see different displays.</li>
+        <p> </p>
+        <li><i class="heading">The Structure of the Map:</i> Looking more in-depth at the actual appearance of the map, the three datasets listed previously will be displayed as a choropleth map with proportional symbols and classed points. The income rate data and population data will be displayed as filled polygons, symbolized with graduated colors. These layers will be presented underneath the emergency call data. The emergency data will be presented in two forms. The first, for the display of the total amount of calls per area, will be displayed as proportional symbols that are associated with a specific polygon. For the other two sections, types of calls and times of calls, the data will be displayed as points symbolized by the nominal(type), or interval(time) categories. In addition to the map, there will be graphs detailing the correlation or lack thereof between the emergency calls and the other two categories. There will also be some ancillary text, providing context for the project and explaining the results of the visual and mathematical analysis.</li>
+        <p> </p>
+        <li><i class="heading">The Data Sources for the Map:</i> The previously mentioned map will need several types of data to be created. For starters, census block data will be download as a shapefile from the United States Census Bureau. This data is available in many year ranges, including 2020. Given that census blocks do not frequently change, the 2020 year range is acceptable even when other data is from a past year. To interact with the census block data, population data and median income data from the year 2019 will also be download in table form from the United State Census Bureau. It is available for many different geographies, but census blocks will be specified so that the data can be joined. The next dataset will be the table of emergency call data which will be gathered from the Open Data BR website for the year 2020. Finally, address data for Baton Rouge, displayed as points, will be downloaded from the EBRGIS Open Data website. This data was created in 2015 but has been updated daily and therefore is highly accurate.</li>
+        <p> </p>
+        <li><i class="heading">The Methodology for the Map:</i>Once the previously mentioned data is downloaded, several steps will have to be taken before it can be displayed on a map. The income and population data should interact with the census blocks seamlessly, but the datasets may need to be normalized before this can occur. If the data is presented in a different format, or has added characters, a join may be impossible until the data has been edited. Once the data is correct, the population and income datasets will be joined to separate census block layers using the census block code as the primary key. This is all the preparation that will need to be done before it can be displayed and manipulated through the symbology function.<p>The next step is to edit the emergency call dataset for volume of data and to ensure that the address field is in the same format as the downloaded address data. There is a large amount of emergency call data, almost 500,000 rows in the table, and therefore the data ultimately displayed will be limited to a 1-year span. Additionally, some fields will be removed from the dataset, as they will be unnecessary for the result. Once the emergency call data has been normalized, it will be geocoded with the address data previously gathered. This data will be looked at when comparing type of calls and the time of calls. Symbolized in class breaks for the time category and unique values for the type category.  For the amount category, the emergency call data points that fall within each census block will be calculated to create a new dataset that has the total count of emergency calls within each block. This will provide the data needed to work with proportional symbols.</p></li>
+    </ol>
+    <h2>Timeline</h2>
+    <p>Below is a table providing the duration of my project and when elements of it will be completed.</p>
+    <table>
+        <tr>
+            <th>&nbsp;</th>
+            <th colspan="5">Week 1</th>
+            <th colspan="5">Week 2</th>
+            <th colspan="5">Week 3</th>
+            <th colspan="5">Week 4</th>
+            <th colspan="5">Week 5</th>
+            <th colspan="5">Week 6</th>
+            <th colspan="5">Week 7</th>
+            <th colspan="5">Week 8</th>
+            <th colspan="5">Week 9</th>
+            <th colspan="5">Week 10</th>
+            <th colspan="1">Week 11</th>
+        </tr>
+        <tr>
+            <td>Task</td>
+            <td>Oct 4</td>
+            <td>Oct 5</td>
+            <td>Oct 6</td>
+            <td>Oct 7</td>
+            <td>Oct 8</td>
+            <td>Oct 11</td>
+            <td>Oct 12</td>
+            <td>Oct 13</td>
+            <td>Oct 14</td>
+            <td>Oct 15</td>
+            <td>Oct 18</td>
+            <td>Oct 19</td>
+            <td>Oct 20</td>
+            <td>Oct 21</td>
+            <td>Oct 22</td>
+            <td>Oct 25</td>
+            <td>Oct 26</td>
+            <td>Oct 27</td>
+            <td>Oct 28</td>
+            <td>Oct 29</td>
+            <td>Nov 1</td>
+            <td>Nov 2</td>
+            <td>Nov 3</td>
+            <td>Nov 4</td>
+            <td>Nov 5</td>
+            <td>Nov 8</td>
+            <td>Nov 9</td>
+            <td>Nov 10</td>
+            <td>Nov 11</td>
+            <td>Nov 12</td>
+            <td>Nov 15</td>
+            <td>Nov 16</td>
+            <td>Nov 17</td>
+            <td>Nov 18</td>
+            <td>Nov 19</td>
+            <td>Nov 22</td>
+            <td>Nov 23</td>
+            <td>Nov 24</td>
+            <td>Nov 25</td>
+            <td>Nov 26</td>
+            <td>Nov 29</td>
+            <td>Nov 30</td>
+            <td>Dec 1</td>
+            <td>Dec 2</td>
+            <td>Dec 3</td>
+            <td>Dec 6</td>
+            <td>Dec 7</td>
+            <td>Dec 8</td>
+            <td>Dec 9</td>
+            <td>Dec 10</td>
+            <td>Dec 13</td>
+        </tr>
+        <tr>
+            <td>Data collection</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Data processing</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Interactivity design</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Map production</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+            <td class="filled">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+</html>
